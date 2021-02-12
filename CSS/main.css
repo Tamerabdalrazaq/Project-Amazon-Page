@@ -80,6 +80,10 @@ img{
     font-size: 1.8rem;
 }
 
+.dark-grey{
+   color: #565959;   
+}
+
 /* TOP NAVBAR */
 
 nav{
@@ -313,7 +317,7 @@ nav .nav-container .nav-right .arrowdown{
 /* MAIN SECTION */ 
 
 main{
-    width: 100vw;
+    width: 100%;
     font-family: ember-light;
     font-size: 1.4rem;
 }
@@ -338,8 +342,9 @@ main h4{
 main .main-wrapper{
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr .5fr;
+    grid-column-gap:2.4rem;
     margin-top: 2rem;
 }
 
@@ -348,7 +353,7 @@ main .main-wrapper{
 /* Left Column Images */
 
 main .main-wrapper .main-left-col{
-    width: 32%;
+    /* width: 32%; */
 }
 
 main .main-wrapper .main-left-col .wrapper{
@@ -391,7 +396,7 @@ main .main-wrapper .main-left-col .wrapper .img-view{
 
 /* PRODUCT DETAILS */
 main .main-wrapper .main-product-details{
-    width: 48%;
+    /* width: 48%; */
     
     /* background:#ffb14a; */
     display: flex;
@@ -411,6 +416,10 @@ main .main-wrapper .main-product-details .brief-details{
 main .main-wrapper .main-product-details .brief-details p{
     font-family: ember-regular;
     font-size: 2.2rem;
+}
+
+main .main-wrapper .main-product-details .brief-details .fas.fa-star,.fas.fa-star-half-alt{
+    color: #ffb14a;
 }
 
 /* SECOND - SECTION */
@@ -520,16 +529,70 @@ main .main-wrapper .main-details-fourth-section .other .price-red{
 }
 
 
-/*  */
-main .main-wrapper .main-buy-product{
-    width: 17%;
-    height: 100%;
-    background: #1a3d20;
+/* Right Column */
+main .main-wrapper .main-right-column{
+    margin-right: 1.2rem;
 }
 
+main .main-wrapper .main-right-column .wrapper{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    border: .5px solid rgba(189, 189, 189, .6);
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
 
+main .main-wrapper .main-right-column .wrapper > div {
+    margin-bottom: 1.5rem;
+}
 
+main .main-wrapper .main-right-column .wrapper .in-stock {
+    color: green;
+}
 
+main .main-wrapper .main-right-column .wrapper select{
+    padding: .3rem;
+    border-radius: .8rem;
+    font-size: 1.1rem;
+    background: #E3E6E6;
+    border-color: #ccc;
+    font-family: ember-regular;
+}
+
+main .main-wrapper .main-right-column .wrapper button{
+    width: 100%;
+    padding: 3px;
+    border: .5px solid rgba(10,10,10,.3);
+    border-radius: 3px;
+    margin-bottom: .8rem;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+}
+
+main .main-wrapper .main-right-column .wrapper button.add-to-cart{
+    background-image: linear-gradient(to top, #F2CB6B, #f3d893);
+}
+
+main .main-wrapper .main-right-column .wrapper button.buy-now{
+    background-image: linear-gradient(to top,#E89834, #F2CB6B);
+}
+
+main .main-wrapper .main-right-column .wrapper button span{
+    flex-grow: 5;
+}
+
+main .main-wrapper .main-right-column .wrapper button i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    background: #333;
+    border-radius: 3px;
+    height:100%;
+    color: rgb(209, 209, 209);
+}
 
 
 
