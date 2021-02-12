@@ -454,6 +454,7 @@ main .main-wrapper .main-details-second-section .sizes-boxes button{
     border: .5px solid rgb(184, 184, 184);
     margin-right: .8rem ;
     font-family: ember-bold;
+    width: initial;
 }
 main .main-wrapper .main-details-second-section .sizes-boxes button:hover{
     background: rgba(204, 204, 204, .6); ;
