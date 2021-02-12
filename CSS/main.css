@@ -20,7 +20,8 @@ html{
 }
 
 body{
-font-family: ember-regular; 
+    font-family: ember-light; 
+    letter-spacing: 1px;
 }
 
 :root{
@@ -50,7 +51,7 @@ img{
     object-position:50% 50%;
 }
 
-/* NAVBAR */
+/* TOP NAVBAR */
 
 nav{
     background-color: var(--navbar-color);
@@ -58,6 +59,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     color: #fff;
     text-align: center;
 }
@@ -79,7 +81,7 @@ nav .nav-container{
     align-items: center;
     height: 80%;
     width: 100%;
-    padding: 0 0.62rem;
+    padding: 0 2rem;
 } 
 
     /* NAV-LEFT */
@@ -92,8 +94,13 @@ nav .nav-container .nav-left{
     align-items: center;
 }
 
+nav .nav-container .nav-left > div{
+    border: 2px solid transparent;
+}
+
 nav .nav-container .nav-left > div:hover{
-    border: 2px solid #fff;
+    border-color: #fff;
+    cursor: pointer;
 }
 
 nav .nav-container .nav-left .nav-left-logo{
@@ -108,7 +115,7 @@ nav .nav-container .nav-left .nav-left-address{
 }
 
 
-/* NAV-MIDDLE */
+    /* NAV-MIDDLE */
 nav .nav-container .nav-middle{
     width: 55%;
     height: 82%;
@@ -118,11 +125,12 @@ nav .nav-container .nav-middle form {
     height: 100%;
     display: flex;
     outline: none;
+    border: 3px solid transparent;
 }
 
 nav .nav-container .nav-middle form:hover {
-    border: 3px solid #ffb14a;
-    border-radius: 1.5px;
+    border-color:  #ffb14a;
+    border-radius: 3px;
 }
 
 nav .nav-container .nav-middle form select,
@@ -134,8 +142,8 @@ nav .nav-container .nav-middle form .btn-search{
 nav .nav-container .nav-middle form select{
     width: 6.5%;
     border: none;
-    border-top-left-radius: 1.5px;
-    border-bottom-left-radius: 1.5px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
     background-color: rgb(245, 245, 245);
     padding: 5px;
     color: #555;
@@ -157,8 +165,8 @@ nav .nav-container .nav-middle form .btn-search{
     justify-content:   center;
     align-items: center;
     color: #131921;
-    border-top-right-radius: 1.5px;
-    border-bottom-right-radius: 1.5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
     border-left: none;
 }
 
@@ -175,10 +183,12 @@ nav .nav-container .nav-right > div{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border: 2px solid transparent;
 }
 
 nav .nav-container .nav-right > div:hover{
-    border: 2px solid #fff;
+    border-color: #fff;
+    cursor: pointer;
 }
 
 nav .nav-container .nav-right .nav-right-country{
@@ -210,4 +220,62 @@ nav .nav-container .nav-right .nav-right-cart i{
 
 nav .nav-container .nav-right .arrowdown{
     font-size: .7rem;
+}
+
+/* BOTTOM NAVBAR */
+
+.bottom-nav{
+    height: 4rem;
+    width: 100%;
+    background: #232F3E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.bottom-nav .bottom-nav-left{
+    width: fit-content;
+    display: flex;
+}
+
+.bottom-nav .bottom-nav-right{
+    width: fit-content;
+}
+
+.bottom-nav h4{
+    font-size: 1.4rem;
+    padding: .3rem .8rem;
+    color: rgb(255, 255, 255);
+    border: 1px solid transparent;
+}
+
+.bottom-nav h4:hover{
+    border-color: #fff;
+    cursor: pointer;
+}
+
+.bottom-nav .bottom-nav-right h4{
+    font-family: ember-bold;
+}
+
+
+/* CATEGORIES ROW */
+
+.categories-row .categories-content{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    color: rgb(71, 71, 71);
+    padding: .8rem 0 0 2.5rem;
+}
+
+.categories-row .categories-content h5{
+    font-size: 1.1rem;
+    margin-right: 1rem;
+}
+
+.categories-row .categories-content h5:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
